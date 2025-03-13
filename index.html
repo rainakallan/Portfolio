@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raina's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <input type="checkbox" id="darkmode" class="input" />
+        <label for="darkmode" class="label">
+          <div class="circle"></div>
+        </label>
+        <div class="container">
+          <h1 class="logo">RK</h1>
+          <ul class="nav-links" id="nav-links">
+            <!-- <li><a href="#about">About</a></li> -->
+            <li><a href="#project.html">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <i class="ri-menu-line" onclick="toggleMenu()"></i>
+        </div>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <div class="container">
+        <h2>Hi, I'am <span>Raina Mirkar</span></h2>
+        <p>
+          A self-taught
+          <span> Front End Developer and UX /Ui Designer</span> a with a passion
+          for creating intuitive and user-centered digital experiences. Although
+          I have a background as a Senior Support Engineer, I have always been
+          fascinated with design and want to make technology more accessible to
+          people.
+        </p>
+        <!-- <a href="#" class="btn">See my Work</a> -->
+      </div>
+    </section>
+    <hr />
+    <!--  -->
+
+    <section id="projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <p>Click on the below link to view my projects</p>
+        <a href="project.html" class="btn1"> Have a look!</a>
+      </div>      
+    </section>
+    <hr />
+
+    <section id="skills">
+      <div class="container">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>Javascript</li>
+          <li>React.js</li>
+          <li>Responsive Design</li>
+          <li>Ui/Ux Designer</li>
+        </ul>
+      </div>
+    </section>
+    <hr />
+    <section id="contact">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p>
+          Feel free to reach out if you are looking for a well focused developer
+          Feel free to reach out if you are looking for a well versed developer
+        </p>
+        <form action="https://formspree.io/f/mgvvpgea" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Raina Mirkar. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

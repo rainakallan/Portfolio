@@ -1,0 +1,380 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Monserat", sans-serif;
+  line-height: 1.6;
+  color: black;
+  background: linear-gradient(135deg, #21151f 10%, #d227a4 50%, #100d0f 100%);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header and Navigation */
+
+header {
+  background: #681468;
+  color: white;
+  padding: 0.5em 0;
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 4px 8px rgb(0, 0, 0, 0.3);
+  transition: background-color 0.4s;
+}
+
+header.active {
+  background-color: #ab7839;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 10px;
+}
+
+.nav-links li a:hover {
+  color: #dd8519;
+}
+
+#hero {
+  color: white;
+  height: 100vh;
+  background-size: cover;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+#hero h2 {
+  font-size: 2em;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+#hero h2 span {
+  font-weight: 700;
+  color: #dd8519;
+}
+
+#hero p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+#hero p span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #681468;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  padding: 10px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #560339;
+  color: #dd8519;
+}
+
+/* About Section
+
+#about {
+  padding: 2.5rem 0;
+  /* background: linear-gradient(145deg, #cb60b3 10%, #ad1283 50%, #de47ac 100%); */
+/* text-align: center;
+  color: white;
+  margin: 4rem 0 4rem 0;
+} */
+
+/* #about h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+} */
+
+/* Projects Section */
+#projects {
+  padding: 2.5rem 0;
+  text-align: center;
+  color: white;
+}
+.hidden{
+  opacity: 0;
+  transform: translate(20px);
+}
+
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }}
+  .fade-in{
+    animation:fadeIn 0.6s ease-out forwards;
+  }
+  
+
+
+#projects h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+#projects p {
+  margin-bottom: 2rem;
+}
+
+.btn1 {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #681468;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  color: white;
+}
+
+.btn1:hover {
+  background-color: #560339;
+  color: #dd8519;
+}
+
+/* Skills Section */
+
+#skills {
+  padding: 2.5rem 0;
+  color: white;
+  text-align: center;
+}
+
+#skills h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+}
+
+.skills-list li {
+  background-color: #ab7839;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 3rem;
+}
+
+/* Contact Section */
+#contact {
+  padding: 2rem 0;
+  text-align: center;
+  color: white;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+
+#contact p {
+  margin-bottom: 2rem;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#contact button {
+  border: none;
+  cursor: pointer;
+  padding: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* Footer */
+footer {
+  background-color: #681468;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* horizontal line */
+hr {
+  height: 2px;
+  background-color: darkgrey;
+  border: none;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+/* Scroll to Top button */
+.scroll-to-top {
+  background-color: #21151f;
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  padding: 10px 10px;
+  color: #ddd;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.scroll-to-top:hover {
+  background-color: #785121;
+}
+
+/* Dark Mode Toggle Button */
+
+.input {
+  visibility: hidden;
+}
+
+.label {
+  position: absolute;
+  width: 60px;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+  background-color: gray;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.4s linear;
+}
+
+.circle {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 2px;
+  left: 3px;
+  background-color: white;
+  border-radius: 50%;
+  animation: toggleOff 0.4s linear forwards;
+}
+
+.input:checked + .label {
+  background-color: #ecedea;
+}
+
+input:checked + .label .circle {
+  animation: toggleOn 0.4s linear forwards;
+  background-color: #100d0f;
+}
+nav .ri-menu-line {
+  font-size: 1.6vw;
+  font-weight: 600;
+  display: none;
+}
+
+@keyframes toggleOn {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(40px);
+  }
+}
+
+@keyframes toggleOff {
+  0% {
+    transform: translateX(40px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 600px) {
+  nav .ri-menu-line {
+    display: initial;
+    font-size: 6vw;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  nav ul {
+    position: absolute;
+    top: 90px;
+    left: 90;
+    right: 0;
+    flex-direction: column;
+    text-align: right;
+    height: 100vh;
+    width: 50%;
+    background-color: rgb(103, 20, 103);
+    overflow: hidden;
+  }
+  nav ul li {
+    padding: 2vw;
+  }
+  .label {
+    position: absolute;
+    width: 60px;
+    height: 20px;
+    top: 10px;
+    right: 80vw;
+    background-color: gray;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.4s linear;
+  }
+}
