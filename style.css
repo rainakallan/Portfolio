@@ -11,8 +11,17 @@ body {
   color: black;
   background: linear-gradient(135deg, #21151f 10%, #d227a4 50%, #100d0f 100%);
 }
+html,
+body {
+  overflow: auto;
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
 
-.container {
+*/ .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
@@ -23,7 +32,7 @@ body {
 header {
   background: #681468;
   color: white;
-  padding: 0.5em 0;
+  padding: 1.5em 0;
   position: fixed;
   width: 100%;
   box-shadow: 0 4px 8px rgb(0, 0, 0, 0.3);
@@ -36,7 +45,7 @@ header.active {
 
 header .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -104,58 +113,92 @@ header .container {
   color: #dd8519;
 }
 
-/* About Section
-
-#about {
-  padding: 2.5rem 0;
-  /* background: linear-gradient(145deg, #cb60b3 10%, #ad1283 50%, #de47ac 100%); */
-/* text-align: center;
-  color: white;
-  margin: 4rem 0 4rem 0;
-} */
-
-/* #about h2 {
-  font-weight: 700;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  margin-top: 2rem;
-} */
-
 /* Projects Section */
 #projects {
-  padding: 2.5rem 0;
-  text-align: center;
+  padding: 2.5rem 1.25rem;
   color: white;
 }
-.hidden{
+
+#projects p {
+  padding: 20px;
+  text-align: center;
+}
+#projects p a {
+  background-color: rgb(19, 2, 2);
+  padding: 0.25rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: rgb(231, 213, 213);
+}
+#projects h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+#project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.project-item {
+  background: #ab7839;
+  opacity: none;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 18.75rem;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+.project-item h3 {
+  margin: 0.625rem 0;
+  font-size: 1rem;
+  color: rgb(235, 235, 235);
+}
+.project-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.project-item p {
+  font-size: 14px;
+}
+.project-item a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #333;
+  color: rgb(236, 226, 226);
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.hidden {
   opacity: 0;
   transform: translate(20px);
 }
 
 @keyframes fadeIn {
-  from{
+  from {
     opacity: 0;
     transform: translateY(20px);
   }
-  to{
+  to {
     opacity: 1;
     transform: translateY(0);
-  }}
-  .fade-in{
-    animation:fadeIn 0.6s ease-out forwards;
   }
-  
-
-
-#projects h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-  margin-top: 1.5rem;
 }
-
-#projects p {
-  margin-bottom: 2rem;
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
 }
 
 .btn1 {
